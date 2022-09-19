@@ -46,10 +46,10 @@ Insert INTO Notices VALUES(NULL, "Addmission form avilable.");
 CREATE TABLE sAcademicCourse(
     courseID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     courseName VARCHAR(255) NOT NULL,
-    coursePrice INTEGER NOT NULL,
+    coursePrice VARCHAR(25) NOT NULL,
     courseDuration VARCHAR(255) NOT NULL
 );
-Insert INTO sAcademicCourse VALUES(NULL,"JAVA", 12000,"3 Months");
+Insert INTO sAcademicCourse VALUES(NULL,"JAVA", "12000","3 Months");
 
 CREATE TABLE sCourseTaken(
     user VARCHAR(255) NOT NULL,

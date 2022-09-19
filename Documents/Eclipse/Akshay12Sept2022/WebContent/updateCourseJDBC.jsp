@@ -8,11 +8,15 @@
 <body>
 
 <%
-String id=request.getParameter("id");
+String id=(String)session.getAttribute("id"); 
 String cname = request.getParameter("cname");
 String cprice = request.getParameter("cprice");
 String cduration = request.getParameter("cduration");
 int count=0;
+System.out.println(id);
+System.out.println(cname);
+System.out.println(cprice);
+System.out.println(cduration);
 
 try
 {
@@ -33,6 +37,8 @@ catch(Exception e)
 	System.out.println(e);
 }
 if(count==1){
+
+	session.removeAttribute("id");
 %>
 <jsp:include page="addCourse.jsp"></jsp:include>
 		<script type="text/javascript">

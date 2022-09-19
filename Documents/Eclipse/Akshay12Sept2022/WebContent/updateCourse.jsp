@@ -33,6 +33,7 @@ border-radius: 20px;
 </head>
 <body><%
 String id=request.getParameter("id");
+session.setAttribute("id", id);
 %>
 
 <form action="updateCourseJDBC.jsp" id="users">
@@ -61,7 +62,7 @@ String id=request.getParameter("id");
 				
 				<tr>
 					<td><button type="reset">Reset</button></td>
-					<td><a href="updateCourseJDBC.jsp?id=<%=id %>"><button type="button"  class="update">Update</button></a></td>
+					<td><button type="submit">Update</button></td>
 				</tr>
 			</table>
 		</form> 
